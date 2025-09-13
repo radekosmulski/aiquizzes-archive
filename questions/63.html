@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <title>In Deep Learning, what can a matrix lookup be replaced with?</title>
+        <meta name="description" content="A matrix lookup is an operation in which we retrieve a row or multiple rows from a matrix. Such lookup can be performed by simply indexing into the matrix....">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="lpZA54Fgt6Mx9vvuFBS7NZsERH+wWua8M95VL3UYDK0vnTcPIBZ3dCfG24it+6i6MxmBK2w8capKVxGbVbQKfQ==" />
+    
+
+    <link rel="stylesheet" media="all" href="../packs/css/application-5184725d.css" data-turbolinks-track="reload" />
+    <script src="../packs/js/application-d5fac83c9fc8d3ee256f.js" data-turbolinks-track="reload"></script>
+    <link href="https://storage.googleapis.com/aiquizzes/static/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  </head>
+  <body class="text-gray-900 antialiased">
+    <header class="bg-gray-100">
+      <div class="sm:flex sm:justify-between sm:items-center max-w-5xl m-auto">
+        <div class="flex sm:block items-center justify-between px-2 py-1">
+          <a class="no-underline" href="../index.html"><div class="font-bold text-2xl mt-0"><span class="text-orange-500">ai</span>quizzes
+            </div></a>
+
+          <div class="sm:hidden">
+            <button id="nav_button" type="button" class="block text-gray-600 focus:text-gray-900 hover:text-gray-900 focus:outline-none">
+              <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                <path id="nav_hamburger" fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
+                <path id="nav_x" class="hidden" fill-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="px-2 pb-2 hidden sm:flex" id="nav_links">
+          <a class="block px-2 py-1 font-semibold hover:bg-gray-300 rounded sm:mt-2 sm:ml-2 no-underline" href="../knowledgebase.html">Knowledgebase</a>
+          <a class="mt-1 block px-2 py-1 font-semibold hover:bg-gray-300 rounded sm:mt-2 sm:ml-2 no-underline" href="../learn.html">Learn</a>
+          <a class="mt-1 block px-2 py-1 font-semibold hover:bg-gray-300 rounded sm:mt-2 sm:ml-2 no-underline" href="../howto.html">Howto</a>
+            <a class="mt-1 block px-2 py-1 font-semibold hover:bg-gray-300 rounded sm:mt-2 sm:ml-2 no-underline" href="../settings.html">Login</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="max-w-xl p-8 mx-auto font-serif text-lg">
+      <div class="flex justify-between">
+  <div class="uppercase text-xs font-semibold text-gray-600 tracking-wide font-sans mt-0">
+    Question 4/5 fast.ai v4 lecture 6
+  </div>
+</div>
+
+
+<h1 class="shadow-md p-3">
+  In Deep Learning, what can a matrix lookup be replaced with?
+</h1>
+
+<p class="uppercase text-xs font-semibold text-gray-600 tracking-wide font-sans mt-6">Answer</p>
+<article class="shadow-md p-3">
+  A matrix lookup is an operation in which we retrieve a row or multiple rows from a matrix. Such lookup can be performed by simply indexing into the matrix. All modern Deep Learning frameworks support this operation but that has not always been the case.<br><br>Say we have a number of entities - we can represent each as a one hot encoded vector. When we pass such a representation to our model, it can look up relevant rows of data by performing matrix multiplication with one hot encoded vectors! By representing our entities not with indices, but as one hot encoded vectors, we transform matrix lookup into an operation that can be performed using a mathematical operation!<br><br>Understanding that these two ways of performing lookup are equivalent (with lookup by index being more computationally efficient) is essential - it will form the basis for figuring out what embeddings are and how they work. <a href="../gcp_images/matrix_lookup.png"><img src="../gcp_images/matrix_lookup.png"></a><br>
+</article>
+
+
+  <p class="uppercase text-xs font-semibold text-gray-600 tracking-wide font-sans mt-6">Relevant part of lecture</p>
+  <div class="embed-responsive aspect-ratio-16/9 flex justify-center mt-1 shadow-md">
+    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/cX30jxMNBUw?start=6266" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+  </div>
+
+
+
+    </div>
+  </body>
+</html>

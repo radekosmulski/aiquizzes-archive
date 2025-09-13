@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <title>A key technique to modern machine learning goes by the name of bagging. Who invented it? How does it work?</title>
+        <meta name="description" content="&lt;p&gt;It was invented in 1994 by Leo Breiman, a retired Berklee professor. The idea is to keep randomly choosing subsets of the training set and training mode...">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="m7MermeCxESLP/bapWhEmczTWh7o9tFxCVZ4m9kaCcIiuGlGxvQEk50P1rwch1cWZM6fSjSQRmdw3zwv+bYPEg==" />
+    
+
+    <link rel="stylesheet" media="all" href="../packs/css/application-5184725d.css" data-turbolinks-track="reload" />
+    <script src="../packs/js/application-d5fac83c9fc8d3ee256f.js" data-turbolinks-track="reload"></script>
+    <link href="https://storage.googleapis.com/aiquizzes/static/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  </head>
+  <body class="text-gray-900 antialiased">
+    <header class="bg-gray-100">
+      <div class="sm:flex sm:justify-between sm:items-center max-w-5xl m-auto">
+        <div class="flex sm:block items-center justify-between px-2 py-1">
+          <a class="no-underline" href="../index.html"><div class="font-bold text-2xl mt-0"><span class="text-orange-500">ai</span>quizzes
+            </div></a>
+
+          <div class="sm:hidden">
+            <button id="nav_button" type="button" class="block text-gray-600 focus:text-gray-900 hover:text-gray-900 focus:outline-none">
+              <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                <path id="nav_hamburger" fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
+                <path id="nav_x" class="hidden" fill-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="px-2 pb-2 hidden sm:flex" id="nav_links">
+          <a class="block px-2 py-1 font-semibold hover:bg-gray-300 rounded sm:mt-2 sm:ml-2 no-underline" href="../knowledgebase.html">Knowledgebase</a>
+          <a class="mt-1 block px-2 py-1 font-semibold hover:bg-gray-300 rounded sm:mt-2 sm:ml-2 no-underline" href="../learn.html">Learn</a>
+          <a class="mt-1 block px-2 py-1 font-semibold hover:bg-gray-300 rounded sm:mt-2 sm:ml-2 no-underline" href="../howto.html">Howto</a>
+            <a class="mt-1 block px-2 py-1 font-semibold hover:bg-gray-300 rounded sm:mt-2 sm:ml-2 no-underline" href="../settings.html">Login</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="max-w-xl p-8 mx-auto font-serif text-lg">
+      <div class="flex justify-between">
+  <div class="uppercase text-xs font-semibold text-gray-600 tracking-wide font-sans mt-0">
+    Question 4/10 fast.ai v4 lecture 7
+  </div>
+</div>
+
+
+<h1 class="shadow-md p-3">
+  A key technique to modern machine learning goes by the name of bagging. Who invented it? How does it work?
+</h1>
+
+<p class="uppercase text-xs font-semibold text-gray-600 tracking-wide font-sans mt-6">Answer</p>
+<article class="shadow-md p-3">
+  <p>It was invented in 1994 by Leo Breiman, a retired Berklee professor. The idea is to keep randomly choosing subsets of the training set and training models on them. We store them to use for prediction later. Having accumulated some amount of trained models, we run them on our data and take the mean of their predictions. The process in which we create each subset of a dataset to train on is called bootstrapping (in this sense, bagging is bootstrap aggregation).</p> <p>The reason this works so well, is that despite they models are not trained on the full dataset and are thus not as accurate as they could be, the errors they make are uncorrelated. That means that upon taking the average of the models, the errors cancel out (the average is zero) and we obtain a good result - better than should the prediction come from a single model.</p> <a href="../gcp_images/bagging.png"><img src="../gcp_images/bagging.png"></a><br>
+</article>
+
+
+  <p class="uppercase text-xs font-semibold text-gray-600 tracking-wide font-sans mt-6">Relevant part of lecture</p>
+  <div class="embed-responsive aspect-ratio-16/9 flex justify-center mt-1 shadow-md">
+    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VEG5xT5gAHc?start=3826" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+  </div>
+
+  <p class="uppercase text-xs font-semibold text-gray-600 tracking-wide font-sans mt-6">supplementary material</p>
+    <div class="text-sm shadow-md p-3">
+      <a href="https://www.stat.berkeley.edu/%7Ebreiman/bagging.pdf">Bagging predictors by Leo Breiman</a>
+    </div>
+
+
+    </div>
+  </body>
+</html>
